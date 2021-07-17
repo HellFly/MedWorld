@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--Euphorium is a ThingDef, and we are telling-->
+    <!--the game that we want to make it a Drug-->
+    <ThingDef ParentName="MedicineBase">
+        <!--What XML calls our item-->
+        <defName>Acetacyline</defName>
+        <!--What Rimworld calls our item-->
+        <label>Acetacyline</label>
+        <!--Description of our item when you click the "i" button-->
+        <description>A drug that reduces pain and help fight infection</description>
+        <!--This stuff loads the textures for our drug-->
+		<graphicData>
+			<texPath>Things/Item/Drug/Acetacyline</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+        <statBases>
+            <!--How much work does it take to make this item-->
+			<WorkToMake>500</WorkToMake>
+            <!--How much is this item worth to traders?-->
+			<MarketValue>25</MarketValue>
+            <!--How much does the item weigh, in KG I think?-->
+			<Mass>0.01</Mass>
+		</statBases>
+        <!--This is the recipe for our item-->
+        <!--I.e what it takes to craft it-->
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <MedicineHerbal>3</MedicineHerbal>
+        </costList>
+        <!--All the values we need for an ingestible drug-->
+        <ingestible>
+            <foodType>Processed</foodType>
+            <joyKind>Chemical</joyKind>
+            <joy>0.30</joy>
+            <drugCategory>Hard</drugCategory>
+            <baseIngestTicks>150</baseIngestTicks>
+            <chairSearchRadius>4</chairSearchRadius>
+            <!--Can someone feed you this drug-->
+            <nurseable>true</nurseable>
+            <!--Put outcomedoers here later-->
+        </ingestible>
+        <!--This comp is needed for the "drug policy" menu-->
+        <!--It also defines a bunch of important properties about the drug-->
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>150</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+		</comps>
+    </ThingDef>
+</Defs>

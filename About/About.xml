@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>MedWorld</name>
+    <description>This mod adds different types of medications you can administer to your pawns.</description>
+    <author>HellFly</author>
+    <supportedVersions>
+        <li>1.3</li>
+    </supportedVersions>
+    <packageId>HellFly.MedWorld</packageId>
+</ModMetaData>
